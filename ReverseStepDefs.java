@@ -6,6 +6,9 @@ import static org .junit.Assert.assertEquals;
 
 public class ReverseStepDefs {
 
+	// These step definitions map to the Reverse feature file. Each test is utilized in each scenario
+	private String _word;
+	
 	@Given("the user enters (.*) reverse$")
 	public void setWordTo (String s){
 		_word = s;

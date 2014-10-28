@@ -6,6 +6,7 @@ import static org .junit.Assert.assertEquals;
 
 public class PalindromeStepDefs {
 
+	// These step definitions map to the Palindrome feature file. Each test is utilized in each scenario
 	private String _word;
 
 	@Given("the user enters (.*) palindrome")
