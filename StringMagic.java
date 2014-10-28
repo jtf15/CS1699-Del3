@@ -1,7 +1,7 @@
 public class StringMagic {
 	
 	// This function tests if a string is an int for the palindrome feature
-	public boolean isNumber(String word){
+	private boolean isNumber(String word){
 		try
 		{
 			Integer.parseInt(word) ;
