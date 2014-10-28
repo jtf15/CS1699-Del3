@@ -6,7 +6,7 @@ import static org .junit.Assert.assertEquals;
 
 public class ReverseStepDefs {
 
-	@Given("the user enters (.*)")
+	@Given("the user enters (.*) reverse$")
 	public void setWordTo (String s){
 		_word = s;
 	}
@@ -14,7 +14,7 @@ public class ReverseStepDefs {
 	private String _output;
 
 	@When ("the user hits enter$")
-	public void runIsWordPrime() {
+	public void runReverseString() {
 		StringMagic magicMaker = new StringMagic();
 		_output = magicMaker.reverseString(_word);
 	}
