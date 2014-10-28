@@ -30,17 +30,14 @@ public class StringMagic {
 	// This feature reverses a string, if it is not a palindrome (and thus, already reversed)
 	public String reverseString(String word){
 		
-		if(isPalindrome(word)){
-			return "Your string was already reversed!" ;
-		}
-		
 		int i1 = word.length() - 1;
 		String temp = "";
 		while( i1 >= 0){
 			temp += word.charAt(i1) ;
 			i1--;
 		}
-		return "Your reversed string is " + temp ;
+		
+		return temp ;
 	}
 	
 	// This feature determines whether a string is an integer number and/or a palindrome
