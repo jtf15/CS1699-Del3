@@ -44,7 +44,7 @@ public class StringMagic {
 			}else if(isPalindrome(word)){
 				return("You wrote a palindrome!");
 			}else if(isNumber(word)){
-				return("You wrote a number!");
+				return("You wrote a number but not a palindrome!");
 			}else{
 				return("You wrote neither a number nor a palindrome!") ;
 			}
