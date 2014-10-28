@@ -6,17 +6,44 @@ Feature: Test palindrome functionality
 
 @PalindromeString
 #This will test if the palindrome feature works for non-numeric strings
-Scenario: String is a palindrome
-Given the user enters a string that is not a number and is a palindrome
-When the user enters the string
-Then the user receives output confirming the string as a palindrome
+Scenario: String is non-numeric and a palindrome
+#Given the user enters a string that is not a number and is a palindrome
+When the user enters racecar
+When the user hits enter
+Then the response is "You wrote a palindrome!"
 
 @PalindromeString
 #This will test if the palindrome feature works for non-numeric strings
-Scenario: String is not a palindrome
-Given the user enters a string that is not a number and is not a palindrome
-When the user enters the string
+Scenario: String is non-numeric and not a palindrome
+#Given the user enters a string that is not a number and is not a palindrome
+Given the user enters cars
+When the user hits enter
+Then the response is "You wrote neither a number nor a palindrome!"
+
 Then the user receives output denying the string as a palindrome
+
+###
+private String _word;
+
+@Given("The user enters (.*)$")
+public void setWordTo (String s){
+	_word = s;
+}
+
+private String _output;
+
+@When ("the user hits enter$")
+public void runHandlePalindrome() {
+	StringMagic magicMaker = new StringMagic();
+	_output = magicMaker.handlePalindrome(_word);
+}
+
+@Then ("^the response is \"([^\"]*)\"$")
+public void theResponseIs(String expected) {
+	assertEquals(expected, _output);
+}
+###
+
 
 @PalindromeInteger
 #This test will determine if the palindrome feature works
