@@ -6,6 +6,7 @@ import static org .junit.Assert.assertEquals;
 
 public class PrimeStepDefs {
 
+	// These step definitions map to the Prime feature file. Each test is utilized in each scenario
 	private String _word;
 
 	@Given("the user enters (.*) prime$")

@@ -7,7 +7,7 @@ So that I can easily obtain a backwards version of any string or number.
 @ReverseString
 #This will test if the reverse string feature works
 Scenario: Reverse String
-Given the user enters a hello reverse
+Given the user enters hello reverse
 When the user hits enter
 Then the response is olleh
 
