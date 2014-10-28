@@ -18,7 +18,7 @@ public class PrimeStepDefs {
 	@When ("the user hits enter$")
 	public void runIsWordPrime() {
 		StringMagic magicMaker = new StringMagic();
-		_output = magicMaker.isWordPrime(_word);
+		_output = magicMaker.isStringPrime(_word);
 	}
 
 	@Then ("^the response is \"([^\"]*)\"$")

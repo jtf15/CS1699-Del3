@@ -1,8 +1,8 @@
+Feature: Test reverse functionality
+
 As a user of String Magic
 I want to be able to reverse a string or number
 So that I can easily obtain a backwards version of any string or number.
-
-Feature: Test reverse functionality
 
 @ReverseString
 #This will test if the reverse string feature works
