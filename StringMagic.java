@@ -90,6 +90,47 @@ public class StringMagic {
 		}
 	}
 	
+	// This function determines whether every char in the given word falls between (a and z) or (A and Z)
+	private boolean charsAreInAlphabet(String word) {
+		if (word.length() == 0)
+			return false;
+		
+		for (char c : word.toCharArray()) {
+			if (!((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))) return false;
+		}
+		return true;
+	}
+	
+	// This function helps the wordSum feature
+	// It assumes that all chars are in the a-z || A-Z alphabet
+	private int getCharValue (char c) {
+		c = Character.toLowerCase(c);
+		return c - 96;
+	}
+	
+	// This feature takes a string of all chars that are a-z || A-Z and adds their numeric values
+	// Num values are assigned in alphabetic order, capitalization ignored
+	// A is 1, B is 2 ... Z is 26
+	public String handleWordSum (String word) {
+		if (!charsAreInAlphabet(word))
+			return "You wrote a string that is not valid for this feature!";
+		
+		int sum = 0;
+		
+		for (char c : word.toCharArray()) {
+			sum += getCharValue(c);
+		}
+		
+		return "You wrote a string that with sum " + sum + "!";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	// This feature determines 
 	/*public String substringPalindrome (String word, int x) {
 		
