@@ -26,18 +26,38 @@ public class StringMagic{
 		return true ;
 	}
 	
+	public static String reverseString(String word){
+		
+		if(isPalindrom(word)){
+			return "Your string was already reversed!" ;
+		}
+		
+		int i1 = word.length() - 1;
+		String temp = "";
+		while( i1 >= 0){
+			temp += word.charAt(i1) ;
+			i1--;
+		}
+		return temp ;
+	}
 	
 	
 	public static void main(String[] args){
 		
-		if(isNumber(args[0]) && isPalindrom(args[0])){
-			System.out.println("You wrote a number that is a palindrome!");
-		}else if(isPalindrom(args[0])){
-			System.out.println("You wrote a palindrome!");
-		}else if(isNumber(args[0])){
-			System.out.println("You wrote a number!");
-		}else{
-			System.out.println("You wrote neither a number nor a palindrome!") ;
+		if(args[1].equalsIgnoreCase("Palindrome")){
+		
+			if(isNumber(args[0]) && isPalindrom(args[0])){
+				System.out.println("You wrote a number that is a palindrome!");
+			}else if(isPalindrom(args[0])){
+				System.out.println("You wrote a palindrome!");
+			}else if(isNumber(args[0])){
+				System.out.println("You wrote a number!");
+			}else{
+				System.out.println("You wrote neither a number nor a palindrome!") ;
+			}
+		}
+		if(args[1].equalsIgnoreCase("Reverse")){
+			System.out.println("Your reversed string is " + reverseString(args[0])) ;
 		}
 		
 	}
