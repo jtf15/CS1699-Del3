@@ -1,8 +1,5 @@
-public class StringMagic{
-
-
-
-	public static boolean isNumber(String word){
+public class StringMagic {
+	public boolean isNumber(String word){
 		try
 		{
 			Integer.parseInt(word) ;
@@ -13,7 +10,7 @@ public class StringMagic{
 		}
 	}
 	
-	public static boolean isPalindrom(String word){
+	public boolean isPalindrome(String word){
 		int i1 = 0;
 		int i2 = word.length() - 1;
 		while (i2 > i1) {
@@ -26,9 +23,9 @@ public class StringMagic{
 		return true ;
 	}
 	
-	public static String reverseString(String word){
+	public String reverseString(String word){
 		
-		if(isPalindrom(word)){
+		if(isPalindrome(word)){
 			return "Your string was already reversed!" ;
 		}
 		
@@ -38,27 +35,18 @@ public class StringMagic{
 			temp += word.charAt(i1) ;
 			i1--;
 		}
-		return temp ;
+		return "Your reversed string is " + temp ;
 	}
 	
-	
-	public static void main(String[] args){
-		
-		if(args[1].equalsIgnoreCase("Palindrome")){
-		
-			if(isNumber(args[0]) && isPalindrom(args[0])){
-				System.out.println("You wrote a number that is a palindrome!");
-			}else if(isPalindrom(args[0])){
-				System.out.println("You wrote a palindrome!");
-			}else if(isNumber(args[0])){
-				System.out.println("You wrote a number!");
+	public String handlePalindrome (String word) {	
+			if(isNumber(word) && isPalindrome(word)){
+				return("You wrote a number that is a palindrome!");
+			}else if(isPalindrome(word)){
+				return("You wrote a palindrome!");
+			}else if(isNumber(word)){
+				return("You wrote a number!");
 			}else{
-				System.out.println("You wrote neither a number nor a palindrome!") ;
+				return("You wrote neither a number nor a palindrome!") ;
 			}
-		}
-		if(args[1].equalsIgnoreCase("Reverse")){
-			System.out.println("Your reversed string is " + reverseString(args[0])) ;
-		}
-		
 	}
 }
