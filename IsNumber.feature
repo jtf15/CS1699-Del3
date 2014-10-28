@@ -1,8 +1,8 @@
+Feature: Testing isNumber
 As a user of String Magic
 I want to be able to tell if a string is a number
 So that my programs can easily distinguish between the two
 
-Feature: Testing isNumber
 
 #Tests a valid number
 @ValidInteger

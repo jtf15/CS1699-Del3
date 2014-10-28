@@ -1,8 +1,7 @@
+Feature: Test palindrome functionality
 As a user of String Magic
 I want to be able to test a non-numeric string
 So that I can easily determine whether it is a palindrome.
-
-Feature: Test palindrome functionality
 
 @PalindromeString
 #This will test if the palindrome feature works for non-numeric strings
