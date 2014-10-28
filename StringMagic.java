@@ -121,7 +121,7 @@ public class StringMagic {
 			sum += getCharValue(c);
 		}
 		
-		return "You wrote a string that with sum " + sum + "!";
+		return "You wrote a string with sum " + sum + "!";
 	}
 	
 	

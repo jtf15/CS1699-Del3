@@ -9,21 +9,21 @@ So that I can easily determine the sum of the value of its characters, ranging f
 Scenario: String has all valid lowercase characters
 Given the user enters cat wordSum
 When the user hits enter
-Then the response is "You wrote a string that with sum 24!";
+Then the response is "You wrote a string with sum 24!";
 
 @WordSum
 #This will test if the wordSum feature works for strings with values A - Z (all uppercase)
 Scenario: String has all valid uppercase characters
 Given the user enters BAT wordSum
 When the user hits enter
-Then the response is "You wrote a string that with sum 23!";
+Then the response is "You wrote a string with sum 23!";
 
 @WordSum
 #This will test if the wordSum feature works for strings with values a - z and A - Z (mixed lowercase and uppercase)
 Scenario: String has all valid uppercase characters
 Given the user enters HaT wordSum
 When the user hits enter
-Then the response is "You wrote a string that with sum 29!";
+Then the response is "You wrote a string with sum 29!";
 
 @wordSum
 #This will test if the wordSum feature works for strings with integer values
