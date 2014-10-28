@@ -8,7 +8,7 @@ public class PrimeStepDefs {
 
 	private String _word;
 
-	@Given("the user enters (.*)$")
+	@Given("the user enters (.*) prime$")
 	public void setWordTo (String s){
 		_word = s;
 	}

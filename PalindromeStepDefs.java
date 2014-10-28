@@ -8,7 +8,7 @@ public class PalindromeStepDefs {
 
 	private String _word;
 
-	@Given("the user enters (.*)$")
+	@Given("the user enters (.*) palindrome")
 	public void setWordTo (String s){
 		_word = s;
 	}

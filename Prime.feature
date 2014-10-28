@@ -7,28 +7,28 @@ So that I can easily determine whether it is a prime integer, or, if it is not a
 @Prime
 #This will test if the prime feature works for strings that are not integers
 Scenario: String has a prime number of letters
-Given the user enters fishing
+Given the user enters fishing prime
 When the user hits enter
 Then the response is "You wrote a string that is prime!"
 
 @Prime
 #This will test if the prime feature works for strings that are not integers
 Scenario: String does not have a prime number of letters
-Given the user enters cars
+Given the user enters cars prime
 When the user hits enter
 Then the response is "You wrote a string that is not prime!"
 
 @Prime
 #This will test if the prime feature works for strings that are integers
 Scenario: String is a prime number
-Given the user enters 17
+Given the user enters 17 prime
 When the user hits enter
 Then the response is "You wrote a number that is prime!"
 
 @Prime
 #This will test if the prime feature works for strings that are integers
 Scenario: String is not a prime number
-Given the user enters 18
+Given the user enters 18 prime
 When the user hits enter
 Then the response is "You wrote a number that is not prime!"
 
